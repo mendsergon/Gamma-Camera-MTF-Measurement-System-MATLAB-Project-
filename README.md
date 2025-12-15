@@ -87,29 +87,42 @@ This MATLAB project implements a **comprehensive Modulation Transfer Function (M
 
 ---
 
-### Analysis Output Example
+### Analysis Output
 
-**Key Measurements:**
-- **Quadrant 1 (7 lp/mm):** Highest frequency, typically lowest MTF due to system limitations
-- **Quadrant 2 (6 lp/mm):** Intermediate frequency for resolution assessment
-- **Quadrant 3 (5 lp/mm):** Reference frequency for standard performance evaluation
-- **Quadrant 4 (4 lp/mm):** Lower frequency, typically highest MTF near system maximum
-
-**Typical Results Summary:**
+**Current Measurement Results:**
 ```
-Quadrant | Freq (lp/mm) | Mean MTF | Std Dev | Pairs | SNR (dB)
----------|---------------|----------|---------|-------|----------
-   1     |      7       |  0.4523  | 0.0231  |   5   |   24.5
-   2     |      6       |  0.6124  | 0.0187  |   6   |   26.8
-   3     |      5       |  0.7532  | 0.0154  |   5   |   28.3
-   4     |      4       |  0.8915  | 0.0122  |   4   |   30.1
+--- Processing Quadrant 1 (7 lp/mm) ---
+Found 41 line pairs
+Mean MTF value: 0.0924
+
+--- Processing Quadrant 2 (6 lp/mm) ---
+Found 18 line pairs
+Mean MTF value: 0.0826
+
+--- Processing Quadrant 3 (5 lp/mm) ---
+Found 21 line pairs
+Mean MTF value: 0.0499
+
+--- Processing Quadrant 4 (4 lp/mm) ---
+Found 23 line pairs
+Mean MTF value: 0.0676
+```
+
+**Results Summary:**
+```
+Quadrant | Frequency (lp/mm) | Mean MTF
+---------|-------------------|----------
+   1     |        7         |  0.0924
+   2     |        6         |  0.0826
+   3     |        5         |  0.0499
+   4     |        4         |  0.0676
 ```
 
 **Interpretation:**
-- **MTF Decrease with Frequency:** Expected trend of decreasing MTF with increasing spatial frequency
-- **Standard Deviation:** Indicates measurement consistency across line pairs
-- **SNR Values:** Higher SNR in lower frequency quadrants due to better signal contrast
-- **Number of Pairs:** Varies by quadrant based on phantom design and image size
+- **MTF Values:** All quadrants show MTF values significantly below 0.1, indicating poor spatial resolution performance
+- **Frequency Response:** Unusual pattern observed with highest MTF at 7 lp/mm (0.0924) and lowest at 5 lp/mm (0.0499)
+- **Line Pair Detection:** Variable number of line pairs detected per quadrant (18-41)
+- **Quality Assessment:** Results suggest potential issues with gamma camera performance or phantom image quality
 
 ---
 
